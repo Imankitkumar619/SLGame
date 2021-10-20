@@ -332,20 +332,14 @@ position: absolute;
         align-items: center;
         justify-content: center;
       }
-      #won video{
-        height: 100vh;
-        width: 100vh;
-      }
+      
       #wonx{
         display:none;
         align-items: center;
         justify-content: center;
       }
       
-      #won video{
-        height: 100vh;
-        width: 100vh;
-      }
+      
       @media (max-width:900px){
     #ludo{
       bottom: -46vmin;
@@ -751,8 +745,28 @@ position: absolute;
       function getScoreOnSnakeAndLadder(score) {
        
         switch (score) {
+          case 1:
+            score = 100;
+            new Audio('move.mp3').play();
+            break;
+            case 2:
+            score = 100;
+            new Audio('move.mp3').play();
+            break;
+            case 3:
+            score = 100;
+            new Audio('move.mp3').play();
+            break;
           case 4:
-            score = 26;
+            score = 100;
+            new Audio('move.mp3').play();
+            break;
+            case 5:
+            score = 100;
+            new Audio('move.mp3').play();
+            break;
+            case 6:
+            score = 100;
             new Audio('move.mp3').play();
             break;
           case 10:
@@ -860,6 +874,8 @@ position: absolute;
         if (playerOneScore === 100) {
           document.getElementById("won").style.display = "flex";
           alert("OGGY IS WINNER")
+          const buttonTwo = document.querySelector(".js-button-2");
+          buttonTwo.classList.add("disabled");
         } else {
           let getNewBoardItem = `.board-item-${playerOneScore}`;
           document
@@ -889,6 +905,8 @@ position: absolute;
         if (playerTwoScore === 100) {
           document.getElementById("wonx").style.display = "flex";
           alert("JACK IS WINNER")
+          const buttonOne = document.querySelector(".js-button-1");
+          buttonOne.classList.add("disabled");
         } else {
           let getNewBoardItem = `.board-item-${playerTwoScore}`;
           document
