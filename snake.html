@@ -832,7 +832,7 @@ position: absolute;
       }
       
       function clearPreviousPosition(score) {
-        if (score >= 1) {
+        if (score >= 0) {
           let getBoardItem = `.board-item-${score}`;
           return document
           .querySelector(getBoardItem)
